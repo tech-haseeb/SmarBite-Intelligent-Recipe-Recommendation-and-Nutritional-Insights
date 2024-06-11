@@ -13,7 +13,7 @@ from matplotlib.font_manager import FontProperties
 import seaborn as sns
 
 # adding title in streamlit
-st.sidebar.markdown(f"<span style='color: black;font-size: 36px;font-weight: bold;'>Haseeb Food </span>", unsafe_allow_html=True)
+st.sidebar.markdown(f"<span style='color: black;font-size: 36px;font-weight: bold;'>SmartBite </span>", unsafe_allow_html=True)
 
 st.sidebar.info("Welcome to SmartBite Analytics. Here, you can find out the nutritional value of different foods.")
 
@@ -107,11 +107,11 @@ def main():
     
         st.markdown("<h1 style='text-align: center;'>SmartBite 🍕🧈🥙 🍲 🩺</h1>", unsafe_allow_html=True)
     
-        st.subheader("About SmartBIte App 🤔")
+        st.subheader("About SmartBite App 🤔")
 
         #all the necessary descriptions
         st.markdown("<h6 style='text-align: justify;font-size:110%;font-family:Arial, sans-serif;line-height: 1.5;'>Food is an essential parameter that plays an important role in the survival of humans. It also plays a major part in depicting a country’s culture. Healthy, nutritious, and high-quality food results in not only a better lifestyle but also develops a person’s immunity and health. Likewise, the consumption of low-quality food which might be deprived of nutritional value impacts a person’s health negatively and makes them susceptible to all types of diseases. In India, there is a persistent complaint, in any civic body-related food section, about the quality of meals available. Likewise, the quality of the oil is also an important factor while cooking any meal. Therefore, the Quality of oil used in frying the food to affect its taste must be monitored too. Its continuous exposure to relatively high temperatures results in degradation of its quality. The purpose of this study is to build an application for the detection of the quality of food and also to detect repeated frying on cooking oils based on the visual properties of the oils. Classification of food items is done on the basis of time left for consumption, edibility, quality, color, and rancidity. The food items are further classified as stale or usable using artificial intelligence algorithms based on the images acquired through a Cell Phone’s camera.</h6>", unsafe_allow_html=True)
-
+        st.markdown("")
         st.subheader("System Diagram")
         st.image("pic1.png")
     
@@ -119,7 +119,7 @@ def main():
 #first page function
 def page_first():
     st.title("🍉 🍓 🍒  ")
-    st.title("Haseeb Food Ingredient Information")
+    st.title("SmartBite Ingredient Information")
     st.title(" 🍅 🥕 🥒 ")
 
     st.markdown("<h6 style='text-align: justify;font-size:100%;font-family:Arial,sans-serif;line-height: 1.2;'>To help your body grow properly, stay healthy, and have energy all day, you need to eat enough of all nutrients. These include proteins, carbohydrates, fats, vitamins, minerals, and water. That's why knowing the nutritional value of food is very important. Here, you can find out how much of each nutrient is in different foods, whether you eat them alone or as part of a dish.</h6>",unsafe_allow_html=True)

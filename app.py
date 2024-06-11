@@ -103,7 +103,7 @@ def main():
     else:
         # Default page to display
         st.write("Welcome to the app. Please select a page from the sidebar.")
-        st.image('pic2.png')
+        st.image('pic2.jpg')
     
         st.markdown("<h1 style='text-align: center;'>Haseeb Food 🍕🧈🥙 🍲 🩺</h1>", unsafe_allow_html=True)
     

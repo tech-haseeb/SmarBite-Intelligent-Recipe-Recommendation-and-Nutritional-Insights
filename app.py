@@ -15,7 +15,7 @@ import seaborn as sns
 # adding title in streamlit
 st.sidebar.markdown(f"<span style='color: black;font-size: 36px;font-weight: bold;'>Haseeb Food </span>", unsafe_allow_html=True)
 
-st.sidebar.info("Welcome to Haseeb Food Data Analytics. Here, you can find out the nutritional value of different foods.")
+st.sidebar.info("Welcome to SmartBite Analytics. Here, you can find out the nutritional value of different foods.")
 
 #read csv file
 DATA_URL = ("resources/assets_modified/01.csv")
@@ -102,24 +102,18 @@ def main():
         pages[selected_page]()
     else:
         # Default page to display
-        st.write("Welcome to the app. Please select a page from the sidebar.")
+        st.write("Welcome to the SmartBite app. Please select a page from the sidebar.")
         st.image('pic2.jpg')
     
-        st.markdown("<h1 style='text-align: center;'>Haseeb Food 🍕🧈🥙 🍲 🩺</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center;'>SmartBite 🍕🧈🥙 🍲 🩺</h1>", unsafe_allow_html=True)
     
-        st.subheader("About Haseeb Food 🤔")
+        st.subheader("About SmartBIte App 🤔")
 
         #all the necessary descriptions
         st.markdown("<h6 style='text-align: justify;font-size:110%;font-family:Arial, sans-serif;line-height: 1.5;'>Food is an essential parameter that plays an important role in the survival of humans. It also plays a major part in depicting a country’s culture. Healthy, nutritious, and high-quality food results in not only a better lifestyle but also develops a person’s immunity and health. Likewise, the consumption of low-quality food which might be deprived of nutritional value impacts a person’s health negatively and makes them susceptible to all types of diseases. In India, there is a persistent complaint, in any civic body-related food section, about the quality of meals available. Likewise, the quality of the oil is also an important factor while cooking any meal. Therefore, the Quality of oil used in frying the food to affect its taste must be monitored too. Its continuous exposure to relatively high temperatures results in degradation of its quality. The purpose of this study is to build an application for the detection of the quality of food and also to detect repeated frying on cooking oils based on the visual properties of the oils. Classification of food items is done on the basis of time left for consumption, edibility, quality, color, and rancidity. The food items are further classified as stale or usable using artificial intelligence algorithms based on the images acquired through a Cell Phone’s camera.</h6>", unsafe_allow_html=True)
 
- 
-
-
-
-
-    
-    
-
+        st.subheader("System Diagram")
+        st.image("pic1.png")
     
 
 #first page function

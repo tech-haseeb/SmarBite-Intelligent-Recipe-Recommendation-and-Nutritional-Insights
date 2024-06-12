@@ -659,10 +659,10 @@ def disease_demographics():
     # Register your pages
     pages = {
         "1. Food Suggestions for Diabetic Patients": diabetes_page,
-        "2. Food Suggestions for Lactose Intolerance":lactose_page,
-        "3. Food Suggestions for Anaemia Patients":anaemia_page,
-        "4. Food Suggestions for patients suffering from Kidney Stones":kidneystones_page,
-        "5. Food Suggestions for patients suffering from Gallbladder Stones":gallstones_page
+    
+        "2. Food Suggestions for Anaemia Patients":anaemia_page,
+        "3. Food Suggestions for patients suffering from Kidney Stones":kidneystones_page,
+        "4. Food Suggestions for patients suffering from Gallbladder Stones":gallstones_page
     }
 
     #title 

@@ -13,7 +13,7 @@ from matplotlib.font_manager import FontProperties
 import seaborn as sns
 
 # adding title in streamlit
-st.sidebar.markdown(f"<span style='color: black;font-size: 36px;font-weight: bold;'>Haseeb Food </span>", unsafe_allow_html=True)
+st.sidebar.markdown(f"<span style='color: black;font-size: 36px;font-weight: bold;'> SmartBite </span>", unsafe_allow_html=True)
 
 st.sidebar.info("Welcome to Haseeb Food Data Analytics. Here, you can find out the nutritional value of different foods.")
 
@@ -61,9 +61,8 @@ def main():
         "Search for Recipe": page_second,
         "Calorie Calculator": page_three,
         "Calories and Cuisine": page_fourth,
-    
-        
     }
+	
     st.sidebar.title("Navigation 🧭")
     # Widget to select your page, you can choose between radio buttons or a selectbox
     page = st.sidebar.radio("(Choose an option to get redirected)", tuple(pages.keys()))
@@ -84,15 +83,10 @@ def about_page():
     st.subheader("System Diagram ♺")
     st.image('pic1.png')
 
-    
-    
-
-    
-
 #first page function
 def page_first():
     st.title("🍉 🍓 🍒  ")
-    st.title("Haseeb Food Ingredient Information")
+    st.title("SmartBite Ingredient Information")
     st.title(" 🍅 🥕 🥒 ")
 
     st.markdown("<h6 style='text-align: justify;font-size:100%;font-family:Arial,sans-serif;line-height: 1.2;'>To help your body grow properly, stay healthy, and have energy all day, you need to eat enough of all nutrients. These include proteins, carbohydrates, fats, vitamins, minerals, and water. That's why knowing the nutritional value of food is very important. Here, you can find out how much of each nutrient is in different foods, whether you eat them alone or as part of a dish.</h6>",unsafe_allow_html=True)
@@ -623,9 +617,6 @@ def page_three():
         st.markdown(f"<span style='color: #367588;font-size: 19px;font-weight: bold;'>Sorry, info not available :)</span>", unsafe_allow_html=True)
     else:
         st.markdown(f"<span style='color: #367588;font-size: 19px;font-weight: bold;'>Sorry, info not available :)</span>", unsafe_allow_html=True)
-    
-   
-        
         
 
 def page_fourth():

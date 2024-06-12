@@ -736,7 +736,7 @@ def lactose_page():
     st.markdown(f"<span style='color: #000080;font-size: 24px;font-weight: bold;'>Dairy products with less amount of lactose</span>", unsafe_allow_html=True)
 
     
-    cols = st.beta_columns(2)
+    cols = st.columns(2)
     
     
     cols[0].write(f"<h6 style='text-align: left;font-size:22px;font-weight: bold;line-height: 1.3;'>Food items</h6>",unsafe_allow_html=True)

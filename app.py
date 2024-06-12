@@ -13,9 +13,9 @@ from matplotlib.font_manager import FontProperties
 import seaborn as sns
 
 # adding title in streamlit
-st.sidebar.markdown(f"<span style='color: black;font-size: 36px;font-weight: bold;'>SmartBite </span>", unsafe_allow_html=True)
+st.sidebar.markdown(f"<span style='color: black;font-size: 36px;font-weight: bold;'>Haseeb Food </span>", unsafe_allow_html=True)
 
-st.sidebar.info("Welcome to SmartBite Data Analytics. Here, you can find out the nutritional value of different foods.")
+st.sidebar.info("Welcome to Haseeb Food Data Analytics. Here, you can find out the nutritional value of different foods.")
 
 #read csv file
 DATA_URL = ("resources/assets_modified/01.csv")
@@ -73,7 +73,6 @@ def main():
 
  
 
-
 #function for the about page
 def about_page():
     st.markdown("<h1 style='text-align: center;'>SmartBite 🍕🧈🥙 🍲 🩺</h1>", unsafe_allow_html=True)
@@ -93,7 +92,7 @@ def about_page():
 #first page function
 def page_first():
     st.title("🍉 🍓 🍒  ")
-    st.title("SmartBite Ingredient Information")
+    st.title("Haseeb Food Ingredient Information")
     st.title(" 🍅 🥕 🥒 ")
 
     st.markdown("<h6 style='text-align: justify;font-size:100%;font-family:Arial,sans-serif;line-height: 1.2;'>To help your body grow properly, stay healthy, and have energy all day, you need to eat enough of all nutrients. These include proteins, carbohydrates, fats, vitamins, minerals, and water. That's why knowing the nutritional value of food is very important. Here, you can find out how much of each nutrient is in different foods, whether you eat them alone or as part of a dish.</h6>",unsafe_allow_html=True)
@@ -656,10 +655,10 @@ def disease_demographics():
     # Register your pages
     pages = {
         "1. Food Suggestions for Diabetic Patients": diabetes_page,
-     
-        "2. Food Suggestions for Anaemia Patients":anaemia_page,
-        "3. Food Suggestions for patients suffering from Kidney Stones":kidneystones_page,
-        "4. Food Suggestions for patients suffering from Gallbladder Stones":gallstones_page
+        "2. Food Suggestions for Lactose Intolerance":lactose_page,
+        "3. Food Suggestions for Anaemia Patients":anaemia_page,
+        "4. Food Suggestions for patients suffering from Kidney Stones":kidneystones_page,
+        "5. Food Suggestions for patients suffering from Gallbladder Stones":gallstones_page
     }
 
     #title 
@@ -712,51 +711,51 @@ def lactose_page():
     st.markdown(f"<span style='color: #367588;font-size: 12px;font-weight: bold;'>Units: Lactose (grams)</span>", unsafe_allow_html=True)
     st.markdown("<h6 style='text-align: justify;font-size:100%;font-family:Arial,sans-serif;line-height: 1.3;'>The amounts of lactose in some common dairy products are displayed here with the help of a bar graph.</h6>",unsafe_allow_html=True)
     st.markdown("")
-    # #Based on categories
-    # categories=['Grains', 'Legumes', 'Vegetables', 'Fruits', 'Spices', 'Nuts', 'Seeds', 'Juice', 'Sugar', 'Dairy', 'Eggs', 'White Meat', 'Red Meat', 'Seafood']
+    #Based on categories
+    categories=['Grains', 'Legumes', 'Vegetables', 'Fruits', 'Spices', 'Nuts', 'Seeds', 'Juice', 'Sugar', 'Dairy', 'Eggs', 'White Meat', 'Red Meat', 'Seafood']
     
     #lactose
 
-    # lact= df_demographics[df_demographics['category'].isin(categories)]
+    lact= df_demographics[df_demographics['category'].isin(categories)]
 
-    # lactose_rich= lact.sort_values(by='lactose', ascending= False)
+    lactose_rich= lact.sort_values(by='lactose', ascending= False)
     
-    # top_20=lactose_rich.head(4)
+    top_20=lactose_rich.head(4)
     
-    # fig = px.bar(top_20, x='lactose', y='name', color='lactose')
-    # fig.update_layout(title='Foods with Lactose Content', autosize=False,width=750, height=700,margin=dict(l=40, r=40, b=40, t=40))
-    # st.plotly_chart(fig)
+    fig = px.bar(top_20, x='lactose', y='name', color='lactose')
+    fig.update_layout(title='Foods with Lactose Content', autosize=False,width=750, height=700,margin=dict(l=40, r=40, b=40, t=40))
+    st.plotly_chart(fig)
 
 
-    # st.markdown("<h6 style='text-align: justify;font-size:100%;font-family:Arial,sans-serif;line-height: 1.3;'>People with lactose intolerance should consume small amounts of milk or products at a time. Also, there are some dairy products that have low amounts of lactose. These include:</h6>",unsafe_allow_html=True)
-    # st.markdown("")
-    # st.markdown(f"<span style='color: #000080;font-size: 24px;font-weight: bold;'>Dairy products with less amount of lactose</span>", unsafe_allow_html=True)
+    st.markdown("<h6 style='text-align: justify;font-size:100%;font-family:Arial,sans-serif;line-height: 1.3;'>People with lactose intolerance should consume small amounts of milk or products at a time. Also, there are some dairy products that have low amounts of lactose. These include:</h6>",unsafe_allow_html=True)
+    st.markdown("")
+    st.markdown(f"<span style='color: #000080;font-size: 24px;font-weight: bold;'>Dairy products with less amount of lactose</span>", unsafe_allow_html=True)
 
     
-    # cols = st.columns(2)
+    cols = st.columns(2)
     
     
-    # cols[0].write(f"<h6 style='text-align: left;font-size:22px;font-weight: bold;line-height: 1.3;'>Food items</h6>",unsafe_allow_html=True)
+    cols[0].write(f"<h6 style='text-align: left;font-size:22px;font-weight: bold;line-height: 1.3;'>Food items</h6>",unsafe_allow_html=True)
 
-    # cols[0].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>Butter</h6>",unsafe_allow_html=True)
-    # cols[0].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>Ghee</h6>",unsafe_allow_html=True)
-    # cols[0].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>Parmesan Cheese</h6>",unsafe_allow_html=True)
-    # cols[0].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>Cheddar Cheese</h6>",unsafe_allow_html=True)
-    # cols[0].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>Swiss Cheese</h6>",unsafe_allow_html=True)    
-    # cols[0].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>Heavy Cream</h6>",unsafe_allow_html=True)
-    # cols[0].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>Probiotic Yoghurt</h6>",unsafe_allow_html=True)
+    cols[0].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>Butter</h6>",unsafe_allow_html=True)
+    cols[0].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>Ghee</h6>",unsafe_allow_html=True)
+    cols[0].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>Parmesan Cheese</h6>",unsafe_allow_html=True)
+    cols[0].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>Cheddar Cheese</h6>",unsafe_allow_html=True)
+    cols[0].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>Swiss Cheese</h6>",unsafe_allow_html=True)    
+    cols[0].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>Heavy Cream</h6>",unsafe_allow_html=True)
+    cols[0].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>Probiotic Yoghurt</h6>",unsafe_allow_html=True)
 
-    # cols[1].write(f"<h6 style='text-align: left;font-size:22px;font-weight: bold;line-height: 1.3;'>Lactose Content (per 100grams)</h6>",unsafe_allow_html=True)
+    cols[1].write(f"<h6 style='text-align: left;font-size:22px;font-weight: bold;line-height: 1.3;'>Lactose Content (per 100grams)</h6>",unsafe_allow_html=True)
 
-    # cols[1].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>0.688 g</h6>",unsafe_allow_html=True)
-    # cols[1].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>0.0029 g</h6>",unsafe_allow_html=True)
-    # cols[1].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>0 g</h6>",unsafe_allow_html=True)
-    # cols[1].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>0.1 g</h6>",unsafe_allow_html=True)    
-    # cols[1].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>0.1 g</h6>",unsafe_allow_html=True)
-    # cols[1].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>3 g</h6>",unsafe_allow_html=True)
-    # cols[1].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>5 g</h6>",unsafe_allow_html=True)
+    cols[1].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>0.688 g</h6>",unsafe_allow_html=True)
+    cols[1].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>0.0029 g</h6>",unsafe_allow_html=True)
+    cols[1].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>0 g</h6>",unsafe_allow_html=True)
+    cols[1].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>0.1 g</h6>",unsafe_allow_html=True)    
+    cols[1].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>0.1 g</h6>",unsafe_allow_html=True)
+    cols[1].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>3 g</h6>",unsafe_allow_html=True)
+    cols[1].write(f"<h6 style='text-align: left;font-size:120%;font-family:Arial,sans-serif;line-height: 1.5;'>5 g</h6>",unsafe_allow_html=True)
 
-    # st.write("")
+    st.write("")
 
 
     st.write("")
